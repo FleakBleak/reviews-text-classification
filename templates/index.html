@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Text Classification</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Text Classification</h1>
+      <form action="/predict" method="post">
+        <label for="sentence">Enter a sentence:</label>
+        <input type="text" name="sentence" id="sentence" required>
+        <button type="submit">Classify</button>
+      </form>
+        <p>The predicted class label is: {{ prediction }}</p>
+    </div>
+  </body>
+</html>
